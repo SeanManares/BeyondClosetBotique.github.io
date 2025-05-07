@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"> <!--specify the language which is english-->
+<head>
+    <meta charset="UTF-8"> <!--this makes it possible to use other characters that are not in the traditional ASCII char set-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--the width=device-width sets the width of the page to follow the screen-width of the device-->
+    <title>Beyond Closet Botique</title>                                <!--the initial scale sets the initial zoom level when the user first loads the webpage-->
+    <link rel="stylesheet" href="about.css" type="text/css">        <!--this is the link to the css, I use external-->
+</head>
+
+<body>
+    <header>          <!--this class contains the background image for my header-->
+        <div class="nav-wrap">       <!--this class holds the background of my nav bar-->
+            <nav class="nav-bar">    <!--this class holds all of my nav bar-->
+                <div class="nav-left">  
+                    <img src="../images/BCBLogo1.png" alt="BCB Logo" id="logo">
+                </div>
+                <div class="nav-center">  
+                    <h1><a href="../index.html">Beyond Closet Botique</a></h1>  <!--the # symbol automatically scrolls at the top-->
+                </div>
+                <div class="nav-right">
+                    <a href="#about">About</a>
+                </div>
+                <div class="nav-right">
+                    <a href="../index.html#products">Products</a>
+                </div>
+                <div class="nav-right">
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="about-us">
+            <h2>About Us</h2>
+            <p>At <b>Beyond Closet Boutique</b>, our passion for authentic fashion drives everything we do.</p>
+            <br>
+            <p>Founded from a deep love for beautiful bags and timeless style, we specialize in <b>100% authentic bags, clothing, and footwear</b> — with a focus on <b>unused and carefully curated preloved pieces</b>. From everyday favorites to standout finds, every item is handpicked with honesty, heart, and a commitment to quality.</p>
+        </div>
+        <div class="about-us-container">
+            <img src="../images/about-us.jpg" alt="about-us img">
+            <p>My journey into entrepreneurship began at a young age, rooted in a genuine appreciation for fashion and the desire to make great style more accessible. Today, that passion continues through every product we offer and every customer we serve.</p>
+            <br>    
+            <p><b>Customer service is at the heart of our business</b>. We believe in making each transaction personal, smooth, and trustworthy. Here's what you can expect from us:</p>
+            <ul>
+                <li>All items are <b>authentic</b>, personally sourced, and <b>fairly priced</b></li>
+                <li>We offer a <b>mix of brands</b> — from reliable favorites to special finds</li>
+                <li><b>Conditions are clearly declared</b> and all photos are true to the item</li>
+                <li>Whether you're shopping for yourself or sending a gift back home, we’re here to help you find something special</li>
+            </ul>
+            <p>Beyond Closet Boutique is more than just a shop — <b>it’s a community built on trust, style, and the joy of discovering the perfect piece.</b></p>
+        </div>
+        <div id="watch"><h4>Watch & Shop | Panoorin at Bumili</h4></div>
+        <div class="vid-container">                               <!--I add this fallback incase the video can't play on the user's web-->
+            <video src="../videos/1stvid.mp4" autoplay muted loop>Your browser does not support the video tag.</video>
+            <video src="../videos/2ndvid.mp4" autoplay muted loop>Your browser does not support the video tag.</video>
+            <video src="../videos/3rdvid.mp4" autoplay muted loop>Your browser does not support the video tag.</video>
+            <video src="../videos/4thvid.mp4" autoplay muted loop>Your browser does not support the video tag.</video>                
+            <video src="../videos/5thvid.mp4" autoplay muted loop>Your browser does not support the video tag.</video>
+        </div>
+        <div class="thank-you">
+            <P><b>Thank you for being part of our story.</b></p>
+            <p><b>We can’t wait to help you find your next favorite.</b></p> 
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>Shop In: United Arab Emirates</p>
+            <p>&copy 2019 Beyond Closet Botique</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {      /*the addEventListener creates a custom response which when the user scrolls it will call the function */
+    const nav = document.querySelector('.nav-wrap');       /*const makes the variable unchangeable, query selector calls the css .nav-wrap */
+    if (window.scrollY > 47) {             /*this adds a true value which if the window's is scrolled 47px vertically, it will automatically activate the .scrolled in css */
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');     /*if the user go back at the top, it will remove the .scrolled */
+    }
+});
+
+window.addEventListener('scroll', function () {  
+    const about_us = document.querySelector('.about-us-container img');   /*this calls the .about-us-container img in css */
+    const video = document.querySelector('.vid-container');   /*this calls the .vid-container video in css */
+    
+    if (window.scrollY > 15) {           /*if the windows is scrolled 15px vertically it will activate the function */
+        about_us.classList.add('scrolled');
+    } else {
+        about_us.classList.remove('scrolled');   /*if the windows goes back at the top, it will again, remove the .scrolled */
+    }
+
+    if (window.scrollY > 350) {           /*if the windows is scrolled 350px vertically it will activate the function */
+        video.classList.add('scrolled');
+    } else {
+        video.classList.remove('scrolled');   /*if the windows goes back not reaching 100px, it will again, remove the .scrolled */
+    }
+});
+    </script>
+</body>
+</html>
