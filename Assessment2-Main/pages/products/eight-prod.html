@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"> <!--specify the language which is english-->
+<head>
+    <meta charset="UTF-8"> <!--this makes it possible to use other characters that are not in the traditional ASCII char set-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--the width=device-width sets the width of the page to follow the screen-width of the device-->
+    <title>Beyond Closet Botique</title>                                <!--the initial scale sets the initial zoom level when the user first loads the webpage-->
+    <link rel="stylesheet" href="../products.css" type="text/css">        <!--this is the link to the css, I use external-->
+</head>
+
+<body>
+    <header>          <!--this class contains the background image for my header-->
+        <div class="nav-wrap">       <!--this class holds the background of my nav bar-->
+            <nav class="nav-bar">    <!--this class holds all of my nav bar-->
+                <div class="nav-left">  
+                    <img src="BCBLogo1.png" alt="BCB Logo" id="logo">
+                </div>
+                <div class="nav-center">                 <!--the (../) means that the file is one folder up from the current folder-->
+                    <h1><a href="../../index.html">Beyond Closet Botique</a></h1>  
+                </div>
+                <div class="nav-right">
+                    <a href="../about.html">About</a>
+                </div>
+                <div class="nav-right">
+                    <a href="../../index.html#products">Products</a>
+                </div>
+                <div class="nav-right">
+                    <a href="../../index.html#contact">Contact</a>    
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main-part">
+        <div class="product-container">
+            <div class="product-images">
+                <img src="../../images/8thprodhover.jpg" alt="2nd view">
+                <img src="../../images/8thprod-3.jpg" alt="3rd view">
+                <img src="../../images/8thprod-4.jpg" alt="4th view">
+                <img src="../../images/8thprod.jpg" alt="1st view">
+            </div>
+            <div class="product-details">
+                <h1>PARFOIS Suede/Leather Crossbody Bag- Burgundy</h1>
+                <p><strong>Condition:</strong>Brandnew / 100% Authentic</p>
+                <p>Flawless</p>
+                <p><strong>Size:</strong> L: 10" x  H: 6" x W: 4"</p>
+                <p>w/ non-detachable & adjustable strap</p>
+                <div class="price">AED 49</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>Shop In: United Arab Emirates</p>
+            <p>&copy 2019 Beyond Closet Botique</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {      /*the addEventListener creates a custom response which when the user scrolls it will call the function */
+    const nav = document.querySelector('.nav-wrap');       /*const makes the variable unchangeable, query selector calls the css .nav-wrap */
+    if (window.scrollY > 47) {             /*this adds a true value which if the window's is scrolled 47px vertically, it will automatically activate the .scrolled in css */
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');     /*if the user go back at the top, it will remove the .scrolled */
+    }
+});
+    </script>
+</body>
+</html>
